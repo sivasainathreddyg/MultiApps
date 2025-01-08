@@ -1,0 +1,73 @@
+{
+  "fileName": "manifest",
+  "layer": "CUSTOMER_BASE",
+  "fileType": "appdescr_variant",
+  "reference": "sap.demo.travel.v2",
+  "id": "customer.app.variant1",
+  "namespace": "apps/sap.demo.travel.v2/appVariants/customer.app.variant1/",
+  "version": "0.1.0",
+  "content": [
+    {
+    "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+    "content": {
+        "modelId": "i18n"
+    },
+    "texts": {
+        "i18n": "i18n/i18n.properties"
+    }
+},
+    {
+    "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+    "content": {
+        "modelId": "@i18n"
+    },
+    "texts": {
+        "i18n": "i18n/i18n.properties"
+    }
+},
+    {
+    "changeType": "appdescr_app_changeInbound",
+    "content": {
+        "inboundId": "Travel-display",
+        "entityPropertyChange": [
+            {
+                "propertyPath": "title",
+                "operation": "UPSERT",
+                "propertyValue": "{{customer.app.variant1_sap.app.crossNavigation.inbounds.Travel-display.title}}"
+            },
+            {
+                "propertyPath": "signature/parameters/sap-appvar-id",
+                "operation": "UPSERT",
+                "propertyValue": {
+                    "required": true,
+                    "filter": {
+                        "value": "customer.app.variant1",
+                        "format": "plain"
+                    },
+                    "launcherValue": {
+                        "value": "customer.app.variant1"
+                    }
+                }
+            }
+        ]
+    },
+    "texts": {
+        "i18n": "i18n/i18n.properties"
+    }
+},
+    {
+    "changeType": "appdescr_app_removeAllInboundsExceptOne",
+    "content": {
+        "inboundId": "Travel-display"
+    },
+    "texts": {}
+},
+    {
+      "changeType": "appdescr_app_setTitle",
+      "content": {},
+      "texts": {
+        "i18n": "i18n/i18n.properties"
+      }
+    }
+  ]
+}
